@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vi du ve tao Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://dut.udn.vn/Files/admin/images/Tin_tuc/Khac/2020/LogoDUT/image002.jpg"
+      type="image/x-icon"
+    />
+    <style>
+      /* Đảm bảo tất cả phần tử có cách tính toán kích thước đúng */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden; /* Ẩn cuộn ngang */
+      }
+
+      .app {
+        max-width: 100vw;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+
+      .header {
+        display: flex;
+        margin-top: 5px;
+        justify-content: space-between;
+      }
+
+      .search {
+        position: relative;
+        width: 200px;
+      }
+
+      .txt-search {
+        width: 100%;
+        height: 26px;
+        padding-left: 10px;
+        line-height: 26px;
+        border-radius: 15px;
+        border: 1px solid rgb(206, 206, 206);
+      }
+
+      .btn-search {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+
+      .nav {
+        width: 100%; /* Chỉnh lại kích thước đầy đủ của khung chứa */
+        padding: 10px;
+      }
+
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; /* Căn giữa nội dung */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Xóa bỏ ký hiệu danh sách */
+      }
+
+      .nav-item {
+        padding: 7px 14px;
+        font-size: 15px;
+        font-weight: 700;
+        white-space: nowrap; /* Ngăn xuống dòng khi nội dung dài */
+      }
+
+      .nav-item:hover {
+        color: rgb(5, 56, 150);
+        border-bottom: 5px solid rgb(5, 56, 150);
+      }
+
+      .title {
+        background-color: rgb(220, 220, 220);
+        border-radius: 3px;
+        padding: 5px 10px;
+        height: 26px;
+        font-size: 14px;
+        margin-top: 10px; /* Thêm khoảng cách giữa tiêu đề và phần trên */
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(104, 104, 104);
+      }
+
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <div class="logo">
+          <img
+            src="http://dut.udn.vn/portals/_default/skins/dhbk/img/front/logo-k_cntt.png"
+            alt="Logo ITF"
+          />
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Tìm kiếm thông tin"
+            class="txt-search"
+          />
+          <a class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./form3_nav1.html" target="content">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="./form3_nav2.html" target="content">GIỚI THIỆU</a>
+          </li>
+          <li class="nav-item">
+            <a href="./form3_nav3.html" target="content">TUYỂN SINH</a>
+          </li>
+          <li class="nav-item">
+            <a href="./form3_nav4.html" target="content">ĐÀO TẠO</a>
+          </li>
+          <li class="nav-item">
+            <a href="./form3_nav5.html" target="content">NGHIÊN CỨU KHOA HỌC</a>
+          </li>
+
+          <li class="nav-item">HỢP TÁC</li>
+          <li class="nav-item">SINH VIÊN</li>
+          <li class="nav-item">CỰU SINH VIÊN</li>
+          <li class="nav-item">LIÊN HỆ</li>
+        </ul>
+      </nav>
+      <div class="title">
+        <a href="#" class="title-link">Trang chu/ Khoa Cong nghe thong tin</a>
+      </div>
+    </div>
+  </body>
+</html>

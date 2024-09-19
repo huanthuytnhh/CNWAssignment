@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vi du ve tao Form</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        box-sizing: border-box; /* Đảm bảo tất cả phần tử tính toán đúng kích thước */
+      }
+
+      li {
+        list-style: none;
+        padding: 12px;
+        line-height: 26px;
+        border: 1px dashed rgb(192, 192, 192);
+        white-space: nowrap; /* Tránh xuống dòng nội dung dài */
+      }
+
+      .menu-header {
+        color: rgba(12, 92, 212, 0.797);
+        font-weight: 700;
+      }
+
+      a {
+        text-decoration: none;
+        color: grey;
+        font-weight: 600;
+      }
+
+      .container {
+        margin: 0 auto; /* Căn giữa vùng chứa */
+        width: 100%; /* Chỉnh lại kích thước đầy đủ */
+        max-width: 600px; /* Đặt giới hạn chiều rộng */
+        overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+        overflow-y: auto; /* Nếu có nhiều mục, hiển thị cuộn dọc */
+        padding: 20px;
+      }
+
+      .menu-header:hover {
+        background-color: white;
+      }
+
+      li:hover {
+        background-color: rgba(12, 92, 212, 0.797);
+      }
+
+      li:hover a {
+        color: white;
+      }
+
+      /* Thay đổi màu chữ của thẻ <a> khi mục được chọn */
+      li.active a {
+        color: rgba(12, 92, 212, 0.797);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="menu-list-item">
+        <li class="menu-header">K. CÔNG NGHỆ THÔNG TIN</li>
+        <li class="menu-item active">
+          <a href="./form3_content.html" target="content">Thông báo</a>
+        </li>
+        <li class="menu-item">
+          <a href="./form3_content2.html" target="content">Tin tức hoạt động</a>
+        </li>
+        <li class="menu-item">
+          <a href="./form3_content3.html" target="content">Đào tạo đại học</a>
+        </li>
+        <li class="menu-item">
+          <a href="./form3_content4.html" target="content"
+            >Đào tạo sau đại học</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="./form3_content5.html" target="content"
+            >Nghiên cứu khoa học</a
+          >
+        </li>
+        <li class="menu-item"><a href="#">Biểu mẫu của khoa</a></li>
+        <li class="menu-item"><a href="#">Góp ý với khoa</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

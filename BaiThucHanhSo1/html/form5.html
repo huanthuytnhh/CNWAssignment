@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script language="JavaScript">
+      function customUpperCase() {
+        var st = document.form1.text1.value;
+        var result = "";
+
+        for (var i = 0; i < st.length; i++) {
+          var charCode = st.charCodeAt(i);
+
+          // Nếu là chữ thường (a-z), chuyển thành chữ hoa
+          if (charCode >= 97 && charCode <= 122) {
+            result += String.fromCharCode(charCode - 32);
+          } else {
+            result += st[i];
+          }
+        }
+
+        document.form1.text1.value = result;
+      }
+    </script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dbe2ef; /* Màu nền nhẹ nhàng */
+        margin: 0; /* Xóa margin mặc định */
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"] {
+        width: 300px; /* Độ rộng của ô nhập liệu */
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="form1">
+      <input
+        type="text"
+        name="text1"
+        value=""
+        onblur="customUpperCase()"
+        placeholder="Nhập chữ thường tại đây"
+      />
+    </form>
+  </body>
+</html>

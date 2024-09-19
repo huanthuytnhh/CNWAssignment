@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script language="JavaScript">
+      function doimau() {
+        var st = document.form1.text1.value;
+        document.bgColor = st;
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #dbe2ef;
+        border-radius: 10px;
+      }
+      form {
+        border-radius: 2px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 0 0 10px white;
+      }
+      input[type="text"] {
+        width: 300px;
+        padding: 3px;
+      }
+      input[type="button"] {
+        /* width: 300px; */
+        padding: 3px;
+      }
+      input[type="button"]:hover {
+        /* width: 300px; */
+        scale: 110%;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="form1" method="" action="">
+      <input type="text" name="text1" value="" placeholder="Nhập màu ở đây" />
+      <input type="button" name="button1" value="OK" onClick="doimau()" />
+    </form>
+  </body>
+</html>
