@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .marquee-container {
+        /* border: 1px solid #000; Đường viền cho marquee */
+        overflow: hidden; /* Ẩn nội dung vượt ra ngoài */
+      }
+      input {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="marquee-container">
+      <marquee
+        direction="right"
+        width="200"
+        height="25"
+        behavior="scroll"
+        style="border: 1px solid; display: flex; justify-content: center"
+      >
+        <span id="marquee1"></span>
+      </marquee>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        name="text1"
+        id="input1"
+        value="Xin chào đến với JS"
+        oninput="updateMarquee('input1', 'marquee1')"
+      />
+    </div>
+    <br />
+    <div>
+      <input
+        type="text"
+        name="text2"
+        id="input2"
+        value="Welcome to Javascript"
+        oninput="updateMarquee('input2', 'marquee2')"
+      />
+    </div>
+    <br />
+    <div class="marquee-container">
+      <marquee
+        direction="right"
+        width="200"
+        height="25"
+        behavior="scroll"
+        style="border: 1px solid; display: flex; justify-content: center"
+      >
+        <span id="marquee2"></span>
+      </marquee>
+    </div>
+
+    <script>
+      function updateMarquee(inputId, marqueeId) {
+        const inputValue = document.getElementById(inputId).value;
+        document.getElementById(marqueeId).textContent = inputValue;
+      }
+
+      // Cập nhật marquee khi trang được tải
+      updateMarquee("input1", "marquee1");
+      updateMarquee("input2", "marquee2");
+    </script>
+  </body>
+</html>

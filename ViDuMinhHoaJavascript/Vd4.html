@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1">
+     <div>
+          <label for="text1">Value:</label>
+          <input type="text" name="text1" value="" />
+     </div>
+      <input type="radio" name="radio1" value="Double" onclick="handleClick(this)" >Double</input>
+      <br>
+      <input type="radio" name="radio1" value="Square"  onclick="handleClick(this)">Square</input>
+      <div>
+          <label for="text2">Result:</label>
+          <input type="text" name="text2" value="" />
+      </div>
+    </form>
+    <script>
+        function handleClick(input){
+            var a=parseInt(document.form1.text1.value);
+            // var b=parseInt(document.form1.text2.value);
+            if(input.value==="Double"){
+                document.form1.text2.value=a+a;
+            } else if (input.value === "Square") {
+                document.form1.text2.value=Math.pow(a,2);
+            }
+
+        }
+    </script>
+  </body>
+</html>

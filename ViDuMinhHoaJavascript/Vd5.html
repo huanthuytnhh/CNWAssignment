@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="form1">
+      <select name="select1" id="select1" onchange="handleChange(this)">
+        <option value="xuan">Xuân</option>
+        <option value="ha">Hạ</option>
+        <option value="thu">Thu</option>
+        <option value="dong">Đông</option>
+      </select>
+    </form>
+    <script>
+      function handleChange(selectElement) {
+        const selectedIndex = selectElement.selectedIndex; // Lấy chỉ số của tùy chọn được chọn
+        const selectedValue = selectElement.value; // Lấy giá trị của tùy chọn được chọn
+
+        // Hiển thị thông báo với thông tin tương ứng
+        switch (selectedValue) {
+          case "xuan":
+            alert(`IDNV: ${selectedIndex}, Ho Ten: Xuân`);
+            break;
+          case "ha":
+            alert(`IDNV: ${selectedIndex}, Ho Ten: Hạ`);
+            break;
+          case "thu":
+            alert(`IDNV: ${selectedIndex}, Ho Ten: Thu`);
+            break;
+          case "dong":
+            alert(`IDNV: ${selectedIndex}, Ho Ten: Đông`);
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

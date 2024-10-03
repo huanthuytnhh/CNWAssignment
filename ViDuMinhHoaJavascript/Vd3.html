@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="form1">
+      <input type="text" name="text1" value="" />
+      <!-- <input type="button" value="+" onclick="handleClick()" />
+        <input type="button" value="-" onclick="handleClick()" />
+        <input type="button" value="x" onclick="handleClick()" />
+        <input type="button" value="/" onclick="handleClick()" />
+        <input type="button" value="^" onclick="handleClick()" /> -->
+      <button type="button" onclick="handleClick(this)">+</button>
+      <button type="button" onclick="handleClick(this)">-</button>
+      <button type="button" onclick="handleClick(this)">x</button>
+      <button type="button" onclick="handleClick(this)">/</button>
+      <button type="button" onclick="handleClick(this)">^</button>
+      <input type="text" name="text2" value="" />
+      <span>=</span>
+      <input type="text" name="text3" value="" />
+    </form>
+    <script>
+      function handleClick(button) {
+        var a = parseFloat(document.form1.text1.value);
+        var b = parseFloat(document.form1.text2.value);
+
+        switch (button.innerText) {
+          case "+":
+            document.form1.text3.value = a + b;
+            break;
+          case "-":
+            document.form1.text3.value = a - b;
+            break;
+          case "x":
+            document.form1.text3.value = a * b;
+            break;
+          case "/":
+            document.form1.text3.value = a / b;
+            break;
+          case "^":
+            document.form1.text3.value = Math.pow(a, b);
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
